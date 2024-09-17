@@ -1,5 +1,9 @@
+"use client";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+
   return (
     <div className="h-screen p-3">
       <div>
