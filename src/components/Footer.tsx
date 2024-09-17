@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const Footer: React.FC = () => {
     const pathname = usePathname();
     return (
-        <footer className='flex flex-row w-full fixed bottom-0 justify-between px-3 font-extrabold'>
+        <footer className='flex flex-row w-full fixed bottom-0 justify-between p-3 rounded-t-lg font-extrabold bg-black/95'>
             <Link href={"/"} className={`duration-100 transition-all ${pathname === '/' ? 'text-blue-500' : 'text-gray-500'} flex flex-col items-center`}>
                 <House strokeWidth={3} />
                 <p>Home</p>
