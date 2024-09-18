@@ -17,4 +17,25 @@
     .animate-spin-reverse {
         animation: spin-reverse 1.5s linear infinite;
     }
+
+
+    .number-enter {
+        @apply opacity-0 translate-y-full;
+        /* Starts off-screen at the bottom */
+    }
+
+    .number-enter-active {
+        @apply opacity-100 translate-y-0 transition-all duration-300 ease-in-out;
+        /* Slides into view */
+    }
+
+    .number-exit {
+        @apply opacity-100 translate-y-0;
+        /* Starts fully visible */
+    }
+
+    .number-exit-active {
+        @apply opacity-0 -translate-y-full transition-all duration-300 ease-in-out;
+        /* Slides out upwards */
+    }
 }

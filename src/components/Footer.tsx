@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { BookmarkCheck, House, Pickaxe, Users, Wallet } from 'lucide-react';
+import { BookmarkCheck, Gamepad, House, Users, Wallet } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
                 <p>Task</p>
             </Link>
             <Link href={"/mine"} className={`duration-100 ${pathname === '/mine' ? 'text-pink-500' : 'text-gray-500'} flex flex-col items-center`}>
-                <Pickaxe />
-                <p>Mine</p>
+                <Gamepad />
+                <p>Games</p>
             </Link>
             <Link href={"/friends"} className={`duration-100 ${pathname === '/friends' ? 'text-yellow-500' : 'text-gray-500'} flex flex-col items-center`}>
                 <Users />
