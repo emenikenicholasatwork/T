@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 <BookmarkCheck />
                 <p>Task</p>
             </Link>
-            <Link href={"/mine"} className={`duration-100 ${pathname === '/mine' ? 'text-pink-500' : 'text-gray-500'} flex flex-col items-center`}>
+            <Link href={"/game"} className={`duration-100 ${pathname === '/game' ? 'text-pink-500' : 'text-gray-500'} flex flex-col items-center`}>
                 <Gamepad />
                 <p>Games</p>
             </Link>

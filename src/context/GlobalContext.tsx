@@ -1,9 +1,11 @@
 "use client";
-import { createContext, ReactNode, useContext } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 
 interface GlobalContextProps {
     formatNumber: (param: number) => string;
+    activeGameTab: string;
+    changeActiveGameTab: (param: string) => void;
 }
 
 interface GlobalProviderProps {
@@ -15,6 +17,12 @@ const GlobalContext = createContext<GlobalContextProps | undefined>(undefined);
 
 export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
 
+    const [activeGameTab, setActiveGameTab] = useState<string>("");
+
+    function changeActiveGameTab(param: string) {
+        setActiveGameTab(param);
+    }
+
     function formatNumber(param: number) {
         return new Intl.NumberFormat("en-US", {
             style: "decimal",
@@ -24,7 +32,9 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
     }
     return (
         <GlobalContext.Provider value={{
-            formatNumber
+            formatNumber,
+            activeGameTab,
+            changeActiveGameTab
         }}>
             {children}
         </GlobalContext.Provider>
